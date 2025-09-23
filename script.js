@@ -27,9 +27,15 @@ keys.forEach(e => {
                 screenNum.push(value);
             }
             // console.log(screenNum.length);
-            console.log(operator.includes(value));
+            // console.log(operator.includes(value));
             screen.textContent = screenNum.join("");
         }
     }
 });
+document.querySelector(".equal").onclick = () => {
+    let expression = screenNum.join(""); // convert array to string
+    let result = eval(expression);       // evaluate the string
+    screen.textContent = result;         // show result on screen
+    screenNum = [result.toString()];     // store result for next operations
+}
 
