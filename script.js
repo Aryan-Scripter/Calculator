@@ -16,8 +16,8 @@ keys.forEach(e => {
             }
             
             if(operator.includes(value)) {
-                if(operator.includes(screenNum[lastElement - 1])) { //checks if
-                    screenNum[lastElement - 1] = value; //overtides the operator
+                if(operator.includes(screenNum[lastElement - 1])) { //checks if last element has operator then:
+                    screenNum[lastElement - 1] = value; //overides the operator
                 }
                 else {
                     screenNum.push(value);
@@ -38,4 +38,3 @@ document.querySelector(".equal").onclick = () => {
     screen.textContent = result;         // show result on screen
     screenNum = [result.toString()];     // store result for next operations
 }
-
